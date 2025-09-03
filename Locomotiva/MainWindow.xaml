@@ -21,12 +21,15 @@
         </ControlTemplate>
     </Window.Resources>
     <Grid>
-        <Canvas x:Name="LocomotiveCanvas" Width="540" Height="250" HorizontalAlignment="Left">
+        <!-- Trilho: será desenhado via code-behind -->
+        <Canvas x:Name="TrackCanvas" Panel.ZIndex="0"/>
+        <!-- Locomotiva -->
+        <Canvas x:Name="LocomotiveCanvas" Width="540" Height="250" HorizontalAlignment="Left" Panel.ZIndex="1">
             <Canvas.RenderTransform>
                 <TranslateTransform x:Name="LocomotiveTranslate"/>
             </Canvas.RenderTransform>
             <!-- Defletor frontal (cowcatcher) -->
-            <Polygon Fill="DarkSlateGray" Points="80,170 100,210 100,130" />
+            <Polygon Fill="SlateGray" Points="80,170 100,210 100,130" />
             <!-- Corpo principal -->
             <Rectangle Fill="Black" Width="320" Height="80" RadiusX="15" RadiusY="15"
                        Canvas.Left="100" Canvas.Top="90"/>
