@@ -1,13 +1,13 @@
 ﻿<Window x:Class="Locomotiva.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Locomotiva" Height="450" Width="800">
     <Window.Resources>
         <!-- Template da roda -->
-        <ControlTemplate x:Key="LocomotiveWheelTemplate" TargetType="ContentControl">
+        <ControlTemplate x:Key="TemplateRodaLocomotiva" TargetType="ContentControl">
             <Grid Width="60" Height="60" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
-                    <RotateTransform x:Name="WheelRotate"/>
+                    <RotateTransform x:Name="RotacaoRoda"/>
                 </Grid.RenderTransform>
                 <Ellipse Fill="Black" Stroke="Gray" StrokeThickness="3"/>
                 <Ellipse Fill="Gray" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -22,11 +22,11 @@
     </Window.Resources>
     <Grid>
         <!-- Locomotiva -->
-        <Canvas x:Name="LocomotiveCanvas" Width="540" Height="250" HorizontalAlignment="Left" Panel.ZIndex="1">
+        <Canvas x:Name="tela" Width="540" Height="250" HorizontalAlignment="Left" Panel.ZIndex="1">
             <Canvas.RenderTransform>
-                <TranslateTransform x:Name="LocomotiveTranslate"/>
+                <TranslateTransform x:Name="movLocomotiva"/>
             </Canvas.RenderTransform>
-            <!-- Defletor frontal (cowcatcher) -->
+            <!-- Defletor frontal -->
             <Polygon Fill="SlateGray" Points="80,170 100,210 100,130" />
             <!-- Corpo principal -->
             <Rectangle Fill="Black" Width="320" Height="80" RadiusX="15" RadiusY="15"
@@ -50,24 +50,24 @@
             <!-- Luz frontal -->
             <Ellipse Fill="Gold" Width="18" Height="18"
                      Canvas.Left="90" Canvas.Top="120" Stroke="DarkGoldenrod" StrokeThickness="2"/>
-            <!-- Frente inclinada (defletor lateral) -->
+            <!-- Frente inclinada -->
             <Polygon Fill="SlateGray" Points="100,170 100,130 80,150"/>
             <!-- Rodas alinhadas e espaçadas -->
-            <ContentControl x:Name="Wheel1" Template="{StaticResource LocomotiveWheelTemplate}"
+            <ContentControl x:Name="roda1" Template="{StaticResource TemplateRodaLocomotiva}"
                             Canvas.Left="120" Canvas.Top="170"/>
-            <ContentControl x:Name="Wheel2" Template="{StaticResource LocomotiveWheelTemplate}"
+            <ContentControl x:Name="roda2" Template="{StaticResource TemplateRodaLocomotiva}"
                             Canvas.Left="220" Canvas.Top="170"/>
-            <ContentControl x:Name="Wheel3" Template="{StaticResource LocomotiveWheelTemplate}"
+            <ContentControl x:Name="roda3" Template="{StaticResource TemplateRodaLocomotiva}"
                             Canvas.Left="320" Canvas.Top="170"/>
-            <!-- Bielas (braço de conexão entre as rodas) -->
-            <Rectangle x:Name="Biela" Fill="DarkGray" Height="10" Width="220"
+            <!-- Biela (braço de conexão entre as rodas) -->
+            <Rectangle x:Name="biela" Fill="DarkGray" Height="10" Width="220"
                        RadiusX="3" RadiusY="3"
                        RenderTransformOrigin="0,0.5"
                        Canvas.Left="150" Canvas.Top="200">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
-                        <RotateTransform x:Name="BielaRotate"/>
-                        <TranslateTransform x:Name="BielaTranslate"/>
+                        <RotateTransform x:Name="RotacaoBiela"/>
+                        <TranslateTransform x:Name="TranslacaoBiela"/>
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
