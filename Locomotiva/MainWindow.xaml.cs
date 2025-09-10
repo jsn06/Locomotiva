@@ -55,7 +55,7 @@ namespace Locomotiva
 
         private void Atualiza(object sender, EventArgs e)
         {
-            // Descobre se está indo pra direita ou esquerda
+            // Direita ou esquerda
             double xAtual = movLocomotiva.X;
             if (xAtual > ultX + 0.1)
                 direcao = 1;
@@ -73,7 +73,7 @@ namespace Locomotiva
             rot2.Angle = angulo;
             rot3.Angle = angulo;
 
-            // Move a biela junto
+            // Mexe biela
             double rad = angulo * Math.PI / 180.0;
             double off = 20;
             double bx1 = x1 + off * Math.Cos(rad);
