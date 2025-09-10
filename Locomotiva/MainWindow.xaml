@@ -21,8 +21,6 @@
         </ControlTemplate>
     </Window.Resources>
     <Grid>
-        <!-- Trilho: será desenhado via code-behind -->
-        <Canvas x:Name="TrackCanvas" Panel.ZIndex="0"/>
         <!-- Locomotiva -->
         <Canvas x:Name="LocomotiveCanvas" Width="540" Height="250" HorizontalAlignment="Left" Panel.ZIndex="1">
             <Canvas.RenderTransform>
