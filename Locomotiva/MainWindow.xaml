@@ -59,7 +59,7 @@
                             Canvas.Left="220" Canvas.Top="170"/>
             <ContentControl x:Name="roda3" Template="{StaticResource TemplateRodaLocomotiva}"
                             Canvas.Left="320" Canvas.Top="170"/>
-            <!-- Biela (braço de conexão entre as rodas) -->
+            <!-- Biela -->
             <Rectangle x:Name="biela" Fill="DarkGray" Height="10" Width="220"
                        RadiusX="3" RadiusY="3"
                        RenderTransformOrigin="0,0.5"
