@@ -39,7 +39,7 @@
                        Canvas.Left="340" Canvas.Top="50"/>
             <Ellipse Fill="DimGray" Width="80" Height="30"
                      Canvas.Left="340" Canvas.Top="35"/>
-            <!-- Janela da cabine -->
+            <!-- Janela -->
             <Rectangle Fill="LightSkyBlue" Width="30" Height="35" RadiusX="6" RadiusY="6"
                        Canvas.Left="370" Canvas.Top="65" Stroke="White" StrokeThickness="2"/>
             <!-- Chaminé -->
