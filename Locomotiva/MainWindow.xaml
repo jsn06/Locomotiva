@@ -26,15 +26,15 @@
             <Canvas.RenderTransform>
                 <TranslateTransform x:Name="movLocomotiva"/>
             </Canvas.RenderTransform>
-            <!-- Defletor frontal -->
+            <!-- Triangulin frontal -->
             <Polygon Fill="SlateGray" Points="80,170 100,210 100,130" />
             <!-- Corpo principal -->
             <Rectangle Fill="Black" Width="320" Height="80" RadiusX="15" RadiusY="15"
                        Canvas.Left="100" Canvas.Top="90"/>
-            <!-- Detalhe lateral do corpo -->
+            <!-- Detalhe lateral -->
             <Rectangle Fill="#333" Width="60" Height="60" RadiusX="10" RadiusY="10"
                        Canvas.Left="120" Canvas.Top="100" Opacity="0.3"/>
-            <!-- Cabine com topo arredondado -->
+            <!-- Cabine -->
             <Rectangle Fill="DimGray" Width="80" Height="80"
                        Canvas.Left="340" Canvas.Top="50"/>
             <Ellipse Fill="DimGray" Width="80" Height="30"
@@ -47,12 +47,12 @@
                        Canvas.Left="130" Canvas.Top="40"/>
             <Ellipse Fill="Gray" Width="35" Height="15"
                      Canvas.Left="125" Canvas.Top="30"/>
-            <!-- Luz frontal -->
+            <!-- Luzinha -->
             <Ellipse Fill="Gold" Width="18" Height="18"
                      Canvas.Left="90" Canvas.Top="120" Stroke="DarkGoldenrod" StrokeThickness="2"/>
-            <!-- Frente inclinada -->
+            <!-- Frente -->
             <Polygon Fill="SlateGray" Points="100,170 100,130 80,150"/>
-            <!-- Rodas alinhadas e espaçadas -->
+            <!-- Rodas -->
             <ContentControl x:Name="roda1" Template="{StaticResource TemplateRodaLocomotiva}"
                             Canvas.Left="120" Canvas.Top="170"/>
             <ContentControl x:Name="roda2" Template="{StaticResource TemplateRodaLocomotiva}"
